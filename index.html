@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> 💥</title>
+  <style>
+    body {
+      background: linear-gradient(to right, darkblue, lightblue ); 
+      color: #fff;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #FFD700; 
+      text-shadow: 2px 2px #FF0000; 
+      font-size: 2.5em;
+    }
+    input, button {
+      font-size: 1.2em;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin: 10px;
+    }
+    input {
+      width: 150px;
+    }
+    button {
+      background-color: #FF0000; 
+      color: white;
+      cursor: pointer;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    }
+    button:hover {
+      background-color: #FFD700;
+      color: #000;
+    }
+    p {
+      font-size: 1.1em;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 8px;
+      margin: 10px auto;
+      width: 80%;
+    }
+    .symbol {
+      font-size: 4em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <img src="superman logo.jpeg" alt="superman">
+  <h1>Welcome to Reever's math something!</h1>
+
+  <input id="num1" type="number" placeholder="Enter num1">
+  <input id="num2" type="number" placeholder="Enter num2"><br>
+
+  <button onclick="PowResult()">💥 Explosive (num1^num2)</button>
+  <p id="result1"></p>
+
+  <button onclick="SqrtResult()">🧠 Brainiac (Square Roots)</button>
+  <p id="result2"></p>
+
+  <button onclick="MinMaxResult()">🕵️‍♂️ Finding Min & Max</button>
+  <p id="result3"></p>
+
+  <script>
+    
+    function PowResult() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var result = Math.pow(num1, num2);
+      document.getElementById("result1").innerHTML = 
+        "💥 Explosive: " + num1 + " raised to " + num2 + " = " + result;
+    }
+    function SqrtResult() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var sqrt1 = Math.sqrt(num1);
+      var sqrt2 = Math.sqrt(num2);
+      document.getElementById("result2").innerHTML = 
+        "🧠 Brainiac: √" + num1 + " = " + sqrt1 + " | √" + " = " + sqrt2;
+    }
+    function MinMaxResult() {
+      var lowest = Math.min(5, 10, -2);
+      var highest = Math.max(5, 10, -2);
+      document.getElementById("result3").innerHTML = 
+        "🕵️‍♂️ Finding: Min = " + lowest + " | Max = " + highest;
+    }
+  </script>
+</body>
+</html>
